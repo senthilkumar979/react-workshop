@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# React JS: Bank Account Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Develop a simple Bank Account Dashboard using React. This single-page application should simulate basic bank operations and display account details. Use functional components, state management, API calls, and event handling to meet the following requirements.
 
-In the project directory, you can run:
 
-### `npm start`
+# Features:
+## Account Summary Component
+ - Display account holder's name, account number, and balance.
+ - Use props to pass this data to the component.
+## Transaction List Component
+ - Render a list of transactions (mock data or fetched from an API). Each transaction should display:
+    Date
+    Description
+    Amount
+    Type (Credit/Debit)
+## Add Transaction Form Component
+  Create a form to add a new transaction.
+  Use controlled inputs for fields:
+  To (Some person name, selectable via dropdown)
+  Description
+  Amount
+  Type (Credit/Debit, selectable via dropdown)
+  Handle form submission and update the transaction list and balance.
+  Validate that the amount is a positive number.
+  Balance Update and Recalculation
+  Ensure that the account balance updates dynamically when a transaction is added.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## API Simulation
+    Use useEffect to fetch initial transaction data from a mock API.
+    Use useState to store and manage transactions.
+    Event Handling
+    Handle button clicks for adding a transaction.
+    Display a confirmation message upon successful addition of a transaction.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Guidelines:
+ ### HTML Structure
+    Include a header for the dashboard
+    Organize components in a clean, responsive layout.
+### State Management
+    Use useState to manage form input, transactions, and account balance.
+### Lifecycle Management
+    Use useEffect to fetch data and update components on initial render.
+### Styling
+    Add basic styles using CSS for a clean and user-friendly design.
+    If you are comfortable with bootstrap, use react-bootstrap
 
-### `npm test`
+# Example Structure:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Bank Account Dashboard
+------------------------
+| Account Summary        |
+|------------------------|
+| Transactions List      |
+|------------------------|
+| Add Transaction Form   |
+--------------------------
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deliverables:
+    A functional single-page React application with all components rendered on the same page.
+    Properly commented code explaining state, props, and API integration.
+    A demo of adding a transaction and dynamically updating the balance and transaction list.
+    
+    After completing the code, commit the code and create a Pull Request out of it for review.
+    Make sure you follow some methodology for problem solving and attach the sheet you used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
