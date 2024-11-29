@@ -1,22 +1,32 @@
 import "./App.css";
-import logo from "./logo.svg";
+import { AccountSummary } from "./AccountSummary";
+import { TransactionsList } from "./TransactionsList";
+import { AddTransaction } from "./AddTransaction";
+import { useState } from "react";
+import { Navbar, Container } from "react-bootstrap";
+
 function App() {
+  const [accountDetails, setAccountDetails] = useState({
+    name: "Senthil",
+    accountNumber: "1234567890",
+    balance: 1000,
+  });
+
+
+  const updateBalance = (value) => {
+    setAccountDetails({ ...accountDetails, balance: value });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Bank Account Dashboard</Navbar.Brand>
+        </Container>
+      </Navbar>
+      <AccountSummary summary={accountDetails}/>
+      <TransactionsList />
+      <AddTransaction balance={accountDetails.balance} updateBalance={updateBalance}/>
     </div>
   );
 }
